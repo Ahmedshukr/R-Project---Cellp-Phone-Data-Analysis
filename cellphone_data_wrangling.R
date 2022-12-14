@@ -8,6 +8,7 @@ View(Cellphone)
 
 View(select(Cellphone, "1980":"2020"))
 
-cellphone <- View(select(Cellphone, c('Country Name', '1980':'1991')))
+View(select(Cellphone, c('Country Name', '1980':'1991')))
 
 #assessing the dataset
+
