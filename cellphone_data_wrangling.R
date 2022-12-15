@@ -32,6 +32,10 @@ sum(is.na(Cellphone))
 
 which(is.na(Cellphone))
 
+#select the desired columns and name the dataset cellphone
+cellphone <- Cellphone %>% 
+  select(c('Country Name', '1981':'2020'))
+
 df <- replace(Cellphone, is.na(Cellphone), 0)
 sum(is.na(df))
 
