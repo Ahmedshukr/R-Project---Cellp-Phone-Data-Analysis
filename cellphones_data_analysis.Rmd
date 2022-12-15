@@ -1,0 +1,30 @@
+---
+title: "Cellphone Data Analysis"
+author: "Ahmed Muhumed"
+date: "2022-12-15"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+In this project, I am going to investigate the total number of cell phones per country that have been used in the world for the last four decades starting from 1980 up to 2020. I am going to investigate the number of cell phones that have been used per country. Which country was first used the highest number of cell phones in the world is one the questions that I am going to answer through the project? The last two years are not included in the dataset, so I will explore the total number of cell phones that have been used between the years of 1980 till 2020.
+
+First we need to load tidyverse library for the purpose of data wrangling.
+```{r loading tidyverse}
+#loading the library
+library(tidyverse)
+```
+Reading the dataset from a given link. 
+```{r}
+Cellphone <- read_csv("https://raw.githubusercontent.com/Ahmedshukr/Cell-Phone-Dataset-Data-Analysis/main/cell_phones_total.csv")
+spec(Cellphone)
+```
+Let us use View function in order to look how the dataset 
+```{r}
+Cellphone
+```
+
+
+
