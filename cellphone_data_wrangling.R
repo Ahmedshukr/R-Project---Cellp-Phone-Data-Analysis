@@ -18,8 +18,12 @@ Cellphone %>%
 #assessing the dataset
 str(Cellphone)
 
+#summary of the dataset
+summary(Cellphone)
+
 Cellphone %>%  
   select(is.numeric)
+
 
 Cellphone %>% 
   select()
