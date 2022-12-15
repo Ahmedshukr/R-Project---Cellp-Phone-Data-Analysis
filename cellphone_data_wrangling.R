@@ -1,15 +1,19 @@
 #installing the packages
 install.packages("tidyverse")
 
+#loading the library
 library(tidyverse)
 
+#reading the dataset from a given link
 Cellphone <- read_csv("https://raw.githubusercontent.com/Ahmedshukr/Cell-Phone-Dataset-Data-Analysis/main/cell_phones_total.csv")
 
+# view the dataset
 View(Cellphone)
 
-View(select(Cellphone, "1980":"2020"))
-
-View(select(Cellphone, c('Country Name', '1980':'1993')))
+# select the desired the section and then view it
+Cellphone %>% 
+  select(c('Country Name', '1980':'1993')) %>% 
+  View()
 
 #assessing the dataset
 str(Cellphone)
