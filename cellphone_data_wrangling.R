@@ -25,13 +25,6 @@ Cellphone %>%
   select(is.numeric)
 
 
-Cellphone %>% 
-  select()
-#sum of the NA values
-sum(is.na(Cellphone))
-
-which(is.na(Cellphone))
-
 #=========================================================#
 #select the desired columns and name the dataset cellphone
 cellphone <- Cellphone %>% 
@@ -42,8 +35,22 @@ View(cellphone)
 #structure of the dataset
 str(cellphone)
 
+# checking any NA values
+anyNA(cellphone)
+
+#sum of the NA values
+sum(is.na(Cellphone))
+
+#locations of the missing values
+which(is.na(Cellphone))
+
 #========================================================#
+#CLEANING
+#========================================================#
+#let us replace all the NA values with zeros
 df <- replace(Cellphone, is.na(Cellphone), 0)
+
+#check if there are still NA values
 sum(is.na(df))
 
 View(df)
