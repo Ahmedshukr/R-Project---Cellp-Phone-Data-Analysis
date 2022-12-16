@@ -32,12 +32,17 @@ sum(is.na(Cellphone))
 
 which(is.na(Cellphone))
 
+#=========================================================#
 #select the desired columns and name the dataset cellphone
 cellphone <- Cellphone %>% 
   select(c('Country Name', '1981':'2020'))
 
 View(cellphone)
 
+#structure of the dataset
+str(cellphone)
+
+#========================================================#
 df <- replace(Cellphone, is.na(Cellphone), 0)
 sum(is.na(df))
 
@@ -48,7 +53,7 @@ View(select(df, c('Country Name', '1980':'1992')))
 
 Cellphone[is.na(Cellphone)] <- 0
 
-select_if(df, is.numeric) 
+select_if(cellphone, is.numeric) 
 
 View(Cellphone)
 
