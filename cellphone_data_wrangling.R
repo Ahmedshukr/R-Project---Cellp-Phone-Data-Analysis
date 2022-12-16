@@ -36,6 +36,8 @@ which(is.na(Cellphone))
 cellphone <- Cellphone %>% 
   select(c('Country Name', '1981':'2020'))
 
+View(cellphone)
+
 df <- replace(Cellphone, is.na(Cellphone), 0)
 sum(is.na(df))
 
