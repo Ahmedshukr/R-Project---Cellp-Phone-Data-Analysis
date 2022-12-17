@@ -39,7 +39,7 @@ str(cellphone)
 anyNA(cellphone)
 
 #sum of the NA values
-sum(is.na(Cellphone))
+sum(is.na(cellphone))
 
 #locations of the missing values
 which(is.na(Cellphone))
@@ -65,6 +65,4 @@ select_if(cellphone, is.numeric)
 View(Cellphone)
 
 
-ggplot(Cellphone) +
-  geom_point(aes(x=2000, y = (Country Name)))
 
