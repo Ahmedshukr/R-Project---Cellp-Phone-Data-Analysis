@@ -15,6 +15,10 @@ Cellphone %>%
   select(c('Country Name', '1980':'1993')) %>% 
   View()
 
+
+#=========================================================#
+ASSESSING
+#=========================================================#
 #assessing the dataset
 str(Cellphone)
 
@@ -24,8 +28,6 @@ summary(Cellphone)
 Cellphone %>%  
   select(is.numeric)
 
-
-#=========================================================#
 #select the desired columns and name the dataset cellphone
 cellphone <- Cellphone %>% 
   select(c('Country Name', '1981':'2020'))
